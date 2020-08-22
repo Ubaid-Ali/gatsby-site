@@ -6,9 +6,9 @@ import Layout from "../Components/Layout"
 const style = {
   section: {
     display: 'flex',
+    justifyContent: 'space-around'
   },
   article: {
-    margin: 'auto',
     textAlign: 'center',
     border: '1px solid brown',
   },
@@ -41,7 +41,7 @@ const Product = ({ data: { allContentfulProduct: { nodes } } }) => {
               <Link to={`/product/${product.slug}`} > More Info </Link>
             </article>
           )
-        })}d
+        })}
             </section>
     </Layout>
   )

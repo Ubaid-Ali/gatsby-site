@@ -1,10 +1,17 @@
 import React from 'react'
 
+
+const style = {
+    footerDiv: {
+        textAlign: 'center',
+    }
+}
+
 const Footer = () => {
     return (
-        <div style={{ textAlign: 'center', border: '1px solid lightgray' }} >
+        <div style={style.footerDiv} >
             <hr />
-            <h3>This is Footer</h3>
+            <h3>Footer</h3>
         </div>
     )
 }

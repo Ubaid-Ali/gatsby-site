@@ -1,19 +1,32 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+const style = {
+    container: {
+    },
+    ul: {
+        display: 'flex',
+        listStyle: 'none',
+    },
+    
+    li: {
+        margin: '2%'
+    }
+}
+
 
 const Navbar = () => {
     return (
-        <div>
-            <ul>
+        <div style={style.container}>
+            <ul style={style.ul}>
 
-                <li>
+                <li style={style.li}>
                     <Link to='/' >Home</Link>
                 </li>
-                <li>
+                <li style={style.li}>
                     <Link to='/product'>Product</Link>
                 </li>
-                <li>
+                <li style={style.li}>
                     <Link to='/blog' >Blog</Link>
                 </li>
 
