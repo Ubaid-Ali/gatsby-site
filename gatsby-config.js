@@ -1,3 +1,9 @@
+const dotenv = require('dotenv');
+
+if (process.env.NODE !== 'production') {
+  dotenv.config();
+}
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -5,6 +11,13 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `rs0mqr6430d8`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+  ],
 }
